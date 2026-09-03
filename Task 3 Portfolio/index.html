@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahnoor Yasir, Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#home" class="logo">Mahnoor<span>Yasir</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menu">Menu</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text reveal">
+        <p class="badge">BS Computer Science Student, Game & Web Developer</p>
+        <h1>Hi, I’m <span>Mahnoor Yasir</span></h1>
+        <h2>I build interactive games, clean websites, and real-world software solutions.</h2>
+        <p class="intro">
+          Passionate Computer Science student based in Lahore, Pakistan, with hands-on experience in Unity 2D,
+          C#, frontend development, PHP/MySQL systems, computer vision, and data science projects.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn secondary" href="assets/Mahnoor_Yasir_Resume.pdf" target="_blank">Download Resume</a>
+        </div>
+
+        <div class="top-links">
+          <a href="mailto:mahnooryasir04@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/mahnoor-yasir/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/mahnoor-yasir" target="_blank">GitHub</a>
+          <a href="https://mahnoor-yasir.itch.io/" target="_blank">Itch.io</a>
+          <a href="https://wa.me/923184327919" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+
+      <aside class="profile reveal">
+        <div class="avatar">MY</div>
+        <h3>Mahnoor Yasir</h3>
+        <p>Frontend Developer, Unity Game Developer</p>
+        <div class="stats">
+          <div><strong>15+</strong><span>Projects</span></div>
+          <div><strong>20+</strong><span>Certificates</span></div>
+          <div><strong>2027</strong><span>BSCS</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="about">
+      <div class="heading reveal">
+        <p>About</p>
+        <h2>Creative developer focused on polished UI, practical systems, and interactive digital experiences.</h2>
+      </div>
+      <div class="two-grid">
+        <article class="card reveal">
+          <h3>Profile</h3>
+          <p>Passionate Computer Science student with hands-on experience in Unity 2D game development and interactive software projects. Skilled in gameplay mechanics, problem solving, and creative digital experiences using Unity and C#.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Education</h3>
+          <ul class="timeline">
+            <li><b>BS Computer Science</b><span>University of Management and Technology, 10/2023 to 11/2027</span></li>
+            <li><b>Intermediate in Computer Science</b><span>Fatima Jinnah College, 09/2021 to 09/2023</span></li>
+            <li><b>Matric in Science</b><span>Govt G/H School Nabi Park Ravi Road Lahore, 04/2019 to 10/2021</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="heading reveal">
+        <p>Experience</p>
+        <h2>Internship experience and professional learning path.</h2>
+      </div>
+      <div class="two-grid">
+        <article class="card reveal"><h3>CodeAlpha Frontend Development Intern</h3><p>Completed frontend development tasks including Image Gallery, Calculator, Portfolio Website, and Music Player using HTML, CSS, and JavaScript.</p></article>
+        <article class="card reveal"><h3>CodeAlpha C++ Programming Intern</h3><p>Completed C++ tasks focused on logic building, file handling, OOP concepts, problem solving, and console-based application development.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="heading reveal">
+        <p>Projects</p>
+        <h2>Live demos, GitHub links, and practical project work.</h2>
+      </div>
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="game">Games</button>
+        <button class="filter" data-filter="data">Data Science</button>
+        <button class="filter" data-filter="cv">Computer Vision</button>
+        <button class="filter" data-filter="software">Software</button>
+        <button class="filter" data-filter="embedded">Embedded</button>
+      </div>
+      <div class="projects-grid">
+        
+    <article class="project-card reveal" data-category="web">
+      <div class="project-label">Web System</div>
+      <h3>Student Performance Hub</h3>
+      <p>A PHP/MySQL academic result management system with role-based access, grading, report generation, tracking, and academic workflow support.</p>
+      <div class="tech-list"><span>PHP</span><span>MySQL</span><span>XAMPP</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir/Student-Performance-Hub" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Unity WebGL Game</div>
+      <h3>Tile Rush</h3>
+      <p>A WebGL puzzle game where players stack, rotate, and drop tiles to complete lines and score high.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>WebGL</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/tile-rush" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/Tile-Rush" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Unity 2D Game</div>
+      <h3>Feather Dash</h3>
+      <p>A Flappy Bird-style arcade game with pipe collisions, scoring logic, and smooth 2D gameplay.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>2D</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/feather-dash" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/FeatherDash" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Unity WebGL Game</div>
+      <h3>Chrono Run</h3>
+      <p>A 2D endless runner where players dodge viruses, survive longer, and restart after collision.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>WebGL</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/chrono-run" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/Chrono-Run" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Android Game</div>
+      <h3>Block Rain</h3>
+      <p>A block-dodging Android game where players avoid falling blocks and one hit ends the run.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>Android</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/block-rain" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/BlockRain" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Android Game</div>
+      <h3>Bounce Ball Smash</h3>
+      <p>An arcade game where players smash bouncing balls to score points as speed and challenge increase.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>Android</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/bounce-ball-smash" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/BounceBallSmash" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="game">
+      <div class="project-label">Android Game</div>
+      <h3>Balloon Blast</h3>
+      <p>A balloon-popping Android game where players score points by popping balloons while avoiding misses.</p>
+      <div class="tech-list"><span>Unity</span><span>C#</span><span>Mobile</span></div>
+      <div class="project-actions"><a href="https://mahnoor-yasir.itch.io/balloon-blast" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/mahnoor-yasir/BalloonBlast" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="data">
+      <div class="project-label">Data Science</div>
+      <h3>Diabetes Hospital Readmission Prediction</h3>
+      <p>ML project on 101,766 UCI Diabetes hospital records using preprocessing, feature engineering, EDA, models, metrics, and visualizations.</p>
+      <div class="tech-list"><span>Python</span><span>Pandas</span><span>Scikit-Learn</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="data">
+      <div class="project-label">Data Science</div>
+      <h3>Ecommerce Customer Purchase Prediction</h3>
+      <p>End-to-end ML solution for predicting customer purchase behavior using EDA, feature engineering, segmentation, and classification.</p>
+      <div class="tech-list"><span>Python</span><span>ML</span><span>EDA</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="cv">
+      <div class="project-label">Computer Vision</div>
+      <h3>Smart Whiteboard Document Scanner</h3>
+      <p>OpenCV scanner using ORB feature detection, BFMatcher, RANSAC homography, alignment, and image stitching.</p>
+      <div class="tech-list"><span>OpenCV</span><span>ORB</span><span>RANSAC</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="cv">
+      <div class="project-label">Computer Vision</div>
+      <h3>Smart Attendance System Face Recognition</h3>
+      <p>Automated attendance system using Python and OpenCV for real-time face detection, recognition, and attendance tracking.</p>
+      <div class="tech-list"><span>Python</span><span>OpenCV</span><span>Face Recognition</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="software">
+      <div class="project-label">C++ System</div>
+      <h3>Multi Level Marketing System</h3>
+      <p>C++ software system for products, participants, commissions, transactions, and graph-based relationship handling.</p>
+      <div class="tech-list"><span>C++</span><span>OOP</span><span>Graphs</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="software">
+      <div class="project-label">C++ System</div>
+      <h3>Hotel Management System</h3>
+      <p>Hotel management system for bookings, guest records, reservations, cancellations, and revenue tracking.</p>
+      <div class="tech-list"><span>C++</span><span>OOP</span><span>File Handling</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+    <article class="project-card reveal" data-category="embedded">
+      <div class="project-label">Embedded System</div>
+      <h3>Arduino Obstacle Avoiding Car</h3>
+      <p>Arduino robot car with ultrasonic obstacle detection and Bluetooth-based manual control for real-time navigation.</p>
+      <div class="tech-list"><span>Arduino</span><span>Sensors</span><span>Bluetooth</span></div>
+      <div class="project-actions"><a href="https://github.com/mahnoor-yasir" target="_blank" rel="noopener">GitHub Profile</a></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="heading reveal">
+        <p>Skills</p>
+        <h2>Technical skills, tools, and areas of focus.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="card reveal"><h3>Languages</h3><p>C++, C, C#, HTML, CSS, Python, JavaScript, SQL</p></article>
+        <article class="card reveal"><h3>Web & Backend</h3><p>PHP, MySQL, XAMPP, responsive design, database-backed systems</p></article>
+        <article class="card reveal"><h3>Game Development</h3><p>Unity 2D, gameplay mechanics, collision detection, UI systems, WebGL, Android games</p></article>
+        <article class="card reveal"><h3>Data Science & CV</h3><p>Pandas, Scikit-Learn, EDA, ML models, OpenCV, ORB, RANSAC, face recognition</p></article>
+        <article class="card reveal"><h3>Tools</h3><p>VS Code, GitHub, Google Colab, Itch.io, LaTeX Overleaf</p></article>
+        <article class="card reveal"><h3>Design</h3><p>Canva, CorelDRAW, Adobe Photoshop, Blender</p></article>
+        <article class="card reveal"><h3>MS Office</h3><p>Word, Excel, PowerPoint, documentation, presentations</p></article>
+        <article class="card reveal"><h3>Soft Skills</h3><p>Team Management, Creative Problem Solving, Time Management, Adaptability</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="certificates">
+      <div class="heading reveal">
+        <p>Certificates</p>
+        <h2>Certificates, workshops, and achievement highlights.</h2>
+      </div>
+      <div class="cert-grid">
+        <article class="cert-card reveal">
+          <span>Game Development Hands-On Training Workshop (ICFCS 2025), UMT SST</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Research Smarter: Using Web of Science for Academic Success, Clarivate &amp; HEC Pakistan</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Introduction to Modern AI, Cisco Networking Academy</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Foundations: Data, Data, Everywhere, Google (Coursera)</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Code Amplified: Building Software with Generative AI Workshop, ICFCS 2026, UMT SST</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Pitch Night Edition, Google Student Ambassador Program 2026</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Confidence and Communication Workshop, UMT OPS</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Talent Quest Fest 2.0 Typing Competition Participation, UMT SST</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Art of Negotiation: Network, Influence &amp; Seal the Deal, UMT OPS</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Crash Course on Python, Google (Coursera)</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Kick-Start Your Freelancing Career Workshop, UMT OPS</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Agentic AI Workshop AI Chatbot Development &amp; Freelancing, IEEE UMT</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Introduction to Data Science, Cisco Networking Academy</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Introduction to Cloud Computing, SkillUp by Simplilearn</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Prompt Engineering with ChatGPT, SkillUp by Simplilearn</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Networking Basics, Cisco Networking Academy</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Speak to Lead Communication &amp; Leadership Workshop, Axiolink Systems</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>English Immersion (SD-100), UMT Connected</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>Tech Fiesta 2026, UMT Robotics &amp; Automation Society</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>AI Your Finals: Study Smarter with AI Prompts &amp; UMT AI Tutor, UMT OPS</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+<article class="cert-card reveal">
+          <span>The Future of Learning: Marketing &amp; Communication in the Digital Age, UMT OPS</span>
+          <a class="cert-link" href="https://www.linkedin.com/in/mahnoor-yasir/details/certifications/" target="_blank" rel="noopener">View Certificate</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="heading reveal">
+        <p>Contact</p>
+        <h2>Let’s connect for internships, projects, collaborations, and opportunities.</h2>
+      </div>
+      <div class="contact-grid">
+        <article class="card reveal">
+          <h3>Contact Details</h3>
+          <p>Email, <a href="mailto:mahnooryasir04@gmail.com">mahnooryasir04@gmail.com</a></p>
+          <p>Phone, <a href="tel:+923184327919">0318 4327919</a></p>
+          <p>Location, Lahore, Pakistan</p>
+          <p>Languages, English Fluent, Urdu Native</p>
+        </article>
+        <form class="contact-form reveal" action="https://formspree.io/f/xkgqqdbj" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Write your message" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Mahnoor Yasir. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
