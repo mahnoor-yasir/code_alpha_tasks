@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CodeAlpha Image Gallery — a professional, responsive gallery with 42 categories and 2,100 curated, topic-aligned photos. Search, filter, lightbox, favorites and dark mode." />
+  <title>CodeAlpha Image Gallery | Mahnoor Yasir</title>
+  <link rel="preconnect" href="https://loremflickr.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">◈</span>
+      <span class="brand-text">CodeAlpha<span class="brand-accent"> Gallery</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#gallery">Gallery</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="liked-pill">❤️ <span id="likedCount">0</span></span>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="eyebrow">CodeAlpha • Frontend Internship • Task 1</p>
+    <h1>A Curated <span class="gradient-text">Image Gallery</span> for Visual Storytellers</h1>
+    <p class="lead">
+      Explore <strong id="totalCountHero">2,100+</strong> unique topic-matched photographs across
+      <strong id="categoryCountHero">42</strong> categories. Every image uses a different locked source query —
+      football looks like football, flowers look like flowers, and repeated cards are removed.
+    </p>
+    <div class="hero-cta">
+      <a href="#gallery" class="btn btn-primary">Browse Gallery</a>
+      <a href="#categories" class="btn btn-ghost">View Categories</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong id="statImages">0</strong><span>Images</span></div>
+      <div><strong id="statCats">0</strong><span>Categories</span></div>
+      <div><strong id="statSubs">0</strong><span>Collections</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTROLS ===== -->
+<section id="gallery" class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input id="search" type="search" placeholder="Search by title or category (e.g. Tokyo, Football, Dogs)…" />
+  </div>
+
+  <div class="control-row">
+    <select id="sortSelect" class="select">
+      <option value="featured">Featured</option>
+      <option value="az">Title A → Z</option>
+      <option value="za">Title Z → A</option>
+      <option value="liked">Liked first</option>
+    </select>
+    <button id="likedToggle" class="toggle-btn">❤️ Liked only</button>
+    <button id="denseToggle" class="toggle-btn">▦ Dense view</button>
+    <button id="surprise" class="toggle-btn primary">🎲 Surprise me</button>
+    <span id="resultCount" class="result-count">0 results</span>
+  </div>
+
+  <div id="chips" class="chips"></div>
+</section>
+
+<!-- ===== GRID ===== -->
+<main class="gallery-main">
+  <div id="grid" class="grid"></div>
+  <div id="loadMoreWrap" class="load-more-wrap" style="display:none">
+    <button id="loadMore" class="btn btn-primary">Load more images</button>
+  </div>
+</main>
+
+<!-- ===== CATEGORY SHOWCASE ===== -->
+<section id="categories" class="category-section">
+  <div class="section-head">
+    <h2>Explore by <span class="gradient-text">Category</span></h2>
+    <p>42 collections — every photo is unique and aligned to its label.</p>
+  </div>
+  <div id="categoryGrid" class="category-grid"></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+  <div class="about-inner">
+    <h2>About the Project</h2>
+    <p>
+      <strong>CodeAlpha Image Gallery</strong> is a modern, responsive frontend project
+      built for the CodeAlpha Frontend Development Internship (Task 1). It demonstrates
+      semantic HTML, advanced CSS (glassmorphism, gradients, responsive grid, dark mode),
+      and vanilla JavaScript features including category filtering, real-time search,
+      sort, favorites with <code>localStorage</code>, a full lightbox previewer
+      with keyboard navigation, image download (Blob API), and Web Share.
+    </p>
+    <ul class="feature-list">
+      <li>✅ 42 categories × 50 images = <strong>2,100 unique topic-matched photos</strong></li>
+      <li>✅ Every image title is generated from its exact category subject</li>
+      <li>✅ Multi-layer fallback so no image is ever broken</li>
+      <li>✅ Responsive masonry-style grid (1 → 5 columns)</li>
+      <li>✅ Dark mode + favorites saved across sessions</li>
+      <li>✅ Lightbox with prev/next, keyboard shortcuts, share & download</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button id="lbClose" class="lb-close" aria-label="Close">×</button>
+  <button id="lbPrev" class="lb-nav lb-prev" aria-label="Previous">‹</button>
+  <button id="lbNext" class="lb-nav lb-next" aria-label="Next">›</button>
+  <div class="lb-content" onclick="event.stopPropagation()">
+    <img id="lbImg" alt="" />
+    <div class="lb-info">
+      <div class="lb-text">
+        <span id="lbCat" class="lb-cat"></span>
+        <h3 id="lbTitle"></h3>
+        <p id="lbBlurb" class="lb-blurb"></p>
+        <span id="lbCounter" class="lb-counter"></span>
+      </div>
+      <div class="lb-actions">
+        <button id="lbLike" class="btn btn-ghost">🤍 Like</button>
+        <button id="lbShare" class="btn btn-ghost">↗ Share</button>
+        <button id="lbDownload" class="btn btn-primary">⬇ Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCROLL TOP ===== -->
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>Created by <strong>Mahnoor Yasir</strong> | CodeAlpha Frontend Development Internship</p>
+  <p class="muted">© 2026 · Built with HTML, CSS & vanilla JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
