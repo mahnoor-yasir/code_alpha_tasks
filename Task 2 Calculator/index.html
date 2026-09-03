@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeAlpha Pro Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <p class="badge">CodeAlpha Frontend Development Task 2</p>
+        <h1>CodeAlpha Pro Calculator</h1>
+        <p class="subtitle">Standard, scientific, and business calculator with history, memory, keyboard support, and dark mode.</p>
+      </div>
+      <button id="themeToggle" class="theme-btn">🌙 Dark</button>
+    </header>
+
+    <main class="calculator-shell">
+      <section class="calculator">
+        <div class="tabs">
+          <button class="tab active" data-mode="standard">Standard</button>
+          <button class="tab" data-mode="scientific">Scientific</button>
+          <button class="tab" data-mode="business">Business</button>
+        </div>
+
+        <div class="display">
+          <div id="expression" class="expression">0</div>
+          <div id="resultPreview" class="preview">0</div>
+        </div>
+
+        <div class="angle-row scientific-only hidden">
+          <button id="degreeToggle" class="small-btn active">DEG</button>
+          <button id="radianToggle" class="small-btn">RAD</button>
+        </div>
+
+        <div class="keypad standard-grid" id="standardPad">
+          <button data-action="memory-clear">MC</button>
+          <button data-action="memory-recall">MR</button>
+          <button data-action="memory-add">M+</button>
+          <button data-action="memory-subtract">M-</button>
+
+          <button data-action="clear" class="danger">AC</button>
+          <button data-action="delete">⌫</button>
+          <button data-value="%">%</button>
+          <button data-value="/">÷</button>
+
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="*">×</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="-">−</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="+">+</button>
+
+          <button data-value="(">(</button>
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button data-value=")">)</button>
+
+          <button data-action="copy">Copy</button>
+          <button data-value="pi">π</button>
+          <button data-value="e">e</button>
+          <button data-action="calculate" class="equals">=</button>
+        </div>
+
+        <div class="keypad scientific-grid hidden" id="scientificPad">
+          <button data-func="sin">sin</button>
+          <button data-func="cos">cos</button>
+          <button data-func="tan">tan</button>
+          <button data-func="asin">sin⁻¹</button>
+          <button data-func="acos">cos⁻¹</button>
+          <button data-func="atan">tan⁻¹</button>
+
+          <button data-func="sqrt">√x</button>
+          <button data-func="cbrt">∛x</button>
+          <button data-func="square">x²</button>
+          <button data-func="cube">x³</button>
+          <button data-value="^">xʸ</button>
+          <button data-func="factorial">x!</button>
+
+          <button data-func="log">log</button>
+          <button data-func="ln">ln</button>
+          <button data-func="exp">exp</button>
+          <button data-func="reciprocal">1/x</button>
+          <button data-func="abs">|x|</button>
+          <button data-action="clear" class="danger">AC</button>
+        </div>
+
+        <div class="business-panel hidden" id="businessPanel">
+          <div class="business-card">
+            <h3>Tax Calculator</h3>
+            <input id="taxAmount" type="number" placeholder="Amount" />
+            <input id="taxRate" type="number" placeholder="Tax rate %" />
+            <button id="taxBtn">Calculate Tax</button>
+            <p id="taxResult">Result: —</p>
+          </div>
+
+          <div class="business-card">
+            <h3>Discount Calculator</h3>
+            <input id="discountPrice" type="number" placeholder="Original price" />
+            <input id="discountRate" type="number" placeholder="Discount %" />
+            <button id="discountBtn">Calculate Discount</button>
+            <p id="discountResult">Result: —</p>
+          </div>
+
+          <div class="business-card">
+            <h3>Profit Margin</h3>
+            <input id="costPrice" type="number" placeholder="Cost price" />
+            <input id="sellingPrice" type="number" placeholder="Selling price" />
+            <button id="profitBtn">Calculate Profit</button>
+            <p id="profitResult">Result: —</p>
+          </div>
+
+          <div class="business-card">
+            <h3>Loan EMI</h3>
+            <input id="loanAmount" type="number" placeholder="Loan amount" />
+            <input id="interestRate" type="number" placeholder="Annual interest %" />
+            <input id="loanMonths" type="number" placeholder="Months" />
+            <button id="emiBtn">Calculate EMI</button>
+            <p id="emiResult">Result: —</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="memory-box">
+          <h2>Memory</h2>
+          <p id="memoryValue">0</p>
+        </div>
+
+        <div class="history-box">
+          <div class="history-header">
+            <h2>History</h2>
+            <button id="clearHistory">Clear</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty">No calculations yet.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>Created by Mahnoor Yasir | CodeAlpha Frontend Development Internship</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
